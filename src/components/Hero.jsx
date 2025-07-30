@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-
 export default function Hero() {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -13,7 +12,6 @@ export default function Hero() {
       },
     },
   };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -25,7 +23,6 @@ export default function Hero() {
       },
     },
   };
-
   return (
     <section
       id="home"
@@ -65,7 +62,7 @@ export default function Hero() {
             </motion.a>
           </div>
           <motion.div
-            className="relative h-80 md:h-full"
+            className="relative h-80 md:h-full min-h-[320px]"
             variants={itemVariants}
           >
             <motion.div
@@ -94,15 +91,13 @@ export default function Hero() {
               }}
             />
             <motion.div
-              className="absolute inset-0 flex items-center justify-center"
-              initial={{ scale: 0.5, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ delay: 0.8, type: 'spring', stiffness: 120 }}
+              className="absolute inset-0 z-10 flex items-center justify-center"
+              variants={itemVariants}
             >
               <img
-                src="https://qotdwocbcoirjlqjkjhq.supabase.co/storage/v1/object/public/imagens.website.creation/construction-concept.svg"
-                alt="Ilustração de construção moderna"
-                className="w-full h-auto max-w-md animate-float"
+                src="https://qotdwocbcoirjlqjkjhq.supabase.co/storage/v1/object/public/user-files/ad5c31a2-f045-4f97-a0ab-2d4f0e6a69e7/1753883735406_4cddhwb6l5d_geotextil_1.jpg"
+                alt="Aplicação de geotêxtil em obra"
+                className="w-full h-full object-cover rounded-2xl shadow-lg"
               />
             </motion.div>
           </motion.div>
